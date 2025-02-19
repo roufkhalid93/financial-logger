@@ -5,7 +5,7 @@ let age = 30;
 let isBlackBelt = false;
 console.log(character, age, isBlackBelt)
 
-const circ = (diameter) => {
+const circ = (diameter: number) => {
   return diameter * Math.PI
 }
 console.log(circ(7.5))
