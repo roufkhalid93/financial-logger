@@ -49,7 +49,7 @@ ninja = {
 console.log(ninja.name, ninja.belt, ninja.age)
 
 
-//EXPLICIT NUMBERS
+//EXPLICIT TYPES
 let protagonist: string;
 let height: number;
 let isLoggedIn: boolean;
@@ -94,3 +94,31 @@ ninja2 = { name: 'mario', age: 20, beltColor: 'black' }
 console.log(ninja2)
 ninja2 = { name: 'luigi', age: 22, beltColor: 'green' }
 console.log(ninja2)
+
+//DYNAMIC (ANY)TYPES
+let age2: any = 25;
+console.log(age2)
+
+age2 = true;
+console.log(age2)
+
+age2 = 'hello'
+console.log(age2)
+
+age2 = { name: 'luigi' }
+console.log(age2)
+
+let mixed3: any[] = [];
+
+mixed3.push(5);
+mixed3.push('mario');
+mixed3.push(false)
+console.log(mixed3)
+
+let ninja3: { name: any, age: any};
+
+ninja3 = {name: 'yoshi', age: 25};
+console.log(ninja3)
+
+ninja3 = {name: 25, age: 'yoshi'};
+console.log(ninja3)
