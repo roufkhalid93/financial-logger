@@ -91,3 +91,25 @@ ninja3 = { name: 'yoshi', age: 25 };
 console.log(ninja3);
 ninja3 = { name: 25, age: 'yoshi' };
 console.log(ninja3);
+//FUNCTIONS
+let greet;
+greet = () => {
+    console.log('hello, world');
+};
+//method 1
+const add = (a, b, c) => {
+    console.log(a + b);
+    console.log(c);
+};
+add(5, 10);
+//method2
+const add2 = (a, b, c = 10) => {
+    console.log(a + b);
+    console.log(c);
+};
+add2(2, 3);
+const minus = (a, b) => {
+    return a - b;
+};
+let result = minus(5, 7);
+console.log(result);

@@ -122,3 +122,32 @@ console.log(ninja3)
 
 ninja3 = {name: 25, age: 'yoshi'};
 console.log(ninja3)
+
+
+//FUNCTIONS
+let greet: Function;
+
+greet = () => {
+    console.log('hello, world');
+}
+
+//method 1
+const add = (a: number, b: number, c?: number | string) =>{
+    console.log(a + b)
+    console.log(c)
+}
+add(5, 10);
+
+//method2
+const add2 = (a: number, b: number, c: number | string = 10) =>{
+  console.log(a + b)
+  console.log(c)
+}
+add2(2, 3);
+
+const minus = (a: number, b: number): number => {
+  return a - b;
+}
+
+let result = minus(5,7)
+console.log(result)
