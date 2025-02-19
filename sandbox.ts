@@ -1,14 +1,17 @@
 
+//TYPE BASICS
 let character = 'luigi';
 let age = 30;
 let isBlackBelt = false;
+console.log(character, age, isBlackBelt)
 
 const circ = (diameter) => {
   return diameter * Math.PI
 }
-
 console.log(circ(7.5))
 
+
+//OBJECTS & ARRAYS
 let names = ['luigi', 'mario', 'yoshi']
 names.push('toad')
 //error will happen when we try to push non-string type data into names
@@ -44,3 +47,50 @@ ninja = {
   age: 8
 };
 console.log(ninja.name, ninja.belt, ninja.age)
+
+
+//EXPLICIT NUMBERS
+let protagonist: string;
+let height: number;
+let isLoggedIn: boolean;
+let array: string[]
+protagonist='myu'
+height=120
+isLoggedIn = true
+array = ['my', 'yu']
+console.log(protagonist, height, isLoggedIn, array)
+
+let array2: string[]= []
+array2.push('kyu');
+console.log(array2)
+//initialize array2 value above with an empty '= []' to allow push option to be used to add value to it. if not, push method can't be used
+
+//union types
+let mixed2: (string | number | boolean)[] = [];
+mixed2.push('hello');
+mixed2.push(20);
+mixed2.push(false);
+console.log(mixed2);
+
+let uid: string|number;
+uid = '123';
+console.log(uid)
+uid = 345;
+console.log(uid)
+
+//objects
+let ninja1: object;
+ninja1 = { name: 'yoshi', age: 30 }
+console.log(ninja1)
+ninja1 = [] //nothing wrong with this cuz array is considered as an object too
+console.log(ninja1)
+
+let ninja2: {
+  name: string,
+  age: number,
+  beltColor: string
+}
+ninja2 = { name: 'mario', age: 20, beltColor: 'black' }
+console.log(ninja2)
+ninja2 = { name: 'luigi', age: 22, beltColor: 'green' }
+console.log(ninja2)
