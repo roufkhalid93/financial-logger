@@ -151,3 +151,23 @@ const minus = (a: number, b: number): number => {
 
 let result = minus(5,7)
 console.log(result)
+
+
+//ALIASES
+type StringOrNum = string | number;
+type objWithName = { name: string, uid: StringOrNum}
+
+const logDetails = (uid: StringOrNum, item: string) => {
+  console.log(`${item} has uid of ${uid}`);
+}
+console.log(logDetails)
+
+const greet2 = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
+}
+console.log(greet2)
+
+const greetAgain = (user: objWithName) => {
+  console.log(`${user.name} says hello`)
+}
+console.log(greetAgain)

@@ -113,3 +113,15 @@ const minus = (a, b) => {
 };
 let result = minus(5, 7);
 console.log(result);
+const logDetails = (uid, item) => {
+    console.log(`${item} has uid of ${uid}`);
+};
+console.log(logDetails);
+const greet2 = (user) => {
+    console.log(`${user.name} says hello`);
+};
+console.log(greet2);
+const greetAgain = (user) => {
+    console.log(`${user.name} says hello`);
+};
+console.log(greetAgain);
