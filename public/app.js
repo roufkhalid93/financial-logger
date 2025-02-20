@@ -11,6 +11,24 @@ const form3 = document.querySelector('.new-item-form');
 console.log(form.children);
 console.log(form2); //cannot access the children property of form2 since the const is declared as an element instead of HTMLForm
 console.log(form3.children);
+//class
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes £${this.amount} for ${this.details}`;
+    }
+}
+const invOne = new Invoice('mario', 'website work', 250);
+const invTwo = new Invoice('luigi', 'darkwebsite work', 300);
+console.log(invOne, invTwo);
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invOne);
+console.log(invoices);
 //input
 const type = document.querySelector('#type');
 const tofrom = document.querySelector('#tofrom');
